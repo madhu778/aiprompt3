@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Volleyball Hobby - Train, Compete, Connect</title>
+    <meta name="description" content="Join Volleyball Hobby to elevate your game. We offer training, tournament information, and a vibrant community for players of all levels. Learn, improve, and have fun!">
+    <meta name="keywords" content="volleyball, volleyball training, volleyball tournaments, learn volleyball, volleyball community">
+    <meta name="author" content="Volleyball Hobby">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏐</text></svg>">
+
+    <!-- Open Graph Meta Tags (for social sharing) -->
+    <meta property="og:title" content="Volleyball Hobby - Train, Compete, Connect">
+    <meta property="og:description" content="The ultimate online hub for amateur and advanced volleyball players. Find training routines, local tournaments, and connect with fellow enthusiasts.">
+    <meta property="og:image" content="https://placehold.co/1200x630/0f172a/38bdf8?text=Volleyball+Hobby">
+    <meta property="og:url" content="https://example.com/volleyball-hobby">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- JSON-LD Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Volleyball Hobby",
+      "url": "https://example.com/volleyball-hobby",
+      "logo": "https://placehold.co/200x200/0f172a/38bdf8?text=VH",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-555-010-4321",
+        "contactType": "customer service"
+      }
+    }
+    </script>
+    
+    <style>
+        /* ========================================
+        CSS Table of Contents
+        ========================================
+        1. CSS Custom Properties (Variables)
+        2. Global Styles & Resets
+        3. Utility Classes
+        4. Header & Navigation
+        5. Hero Section
+        6. Fun Facts Section
+        7. Training Section
+        8. Tournaments Section
+        9. Feedback & Contact Forms
+        10. About Section
+        11. Footer
+        12. Back-to-Top Button
+        13. Animations & Transitions
+        14. Responsive Media Queries
+        ========================================
+        */
+
+        /* 1. CSS Custom Properties (Variables) */
+        :root {
+            /* Dark Theme (Default) */
+            --bg-color: #0f172a;
+            --panel-color: #1e293b;
+            --panel-color-light: #334155;
+            --text-color: #e2e8f0;
+            --heading-color: #ffffff;
+            --muted-text-color: #94a3b8;
+            --accent-color: #38bdf8;
+            --accent-color-hover: #7dd3fc;
+            --accent-color-2: #60a5fa;
+            --border-color: rgba(148, 163, 184, 0.2);
+            --shadow-color: rgba(0, 0, 0, 0.3);
+            --success-color: #22c55e;
+            --error-color: #ef4444;
+            --backdrop-color: rgba(15, 23, 42, 0.8);
+        }
+
+        [data-theme="light"] {
+            --bg-color: #f8fafc;
+            --panel-color: #ffffff;
+            --panel-color-light: #f1f5f9;
+            --text-color: #334155;
+            --heading-color: #0f172a;
+            --muted-text-color: #64748b;
+            --accent-color: #0ea5e9;
+            --accent-color-hover: #38bdf8;
+            --accent-color-2: #2563eb;
+            --border-color: rgba(203, 213, 225, 0.5);
+            --shadow-color: rgba(15, 23, 42, 0.1);
+            --success-color: #16a34a;
+            --error-color: #dc2626;
+            --backdrop-color: rgba(248, 250, 252, 0.8);
+        }
+
+        /* 2. Global Styles & Resets */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px; /* Offset for fixed header */
+        }
+
+        body {
+            font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--heading-color);
+            line-height: 1.2;
+            margin-bottom: 0.75em;
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); }
+        h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+        p { margin-bottom: 1rem; }
+        a { color: var(--accent-color); text-decoration: none; transition: color 0.2s; }
+        a:hover { color: var(--accent-color-hover); }
+        img { max-width: 100%; height: auto; display: block; }
+        ul { list-style-type: none; }
+        section { padding: 6rem 0; }
+
+        /* 3. Utility Classes */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header { text-align: center; margin-bottom: 4rem; }
+        .section-header h2 { margin-bottom: 0.5rem; }
+        .section-header p { max-width: 700px; margin: 0 auto; color: var(--muted-text-color); }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.8rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: var(--accent-color-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+        }
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--accent-color);
+            border: 2px solid var(--accent-color);
+        }
+        .btn-secondary:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        /* 4. Header & Navigation */
+        .main-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem 0;
+            z-index: 1000;
+            transition: background-color 0.3s, box-shadow 0.3s, padding 0.3s;
+        }
+        .main-header.scrolled {
+            background-color: var(--backdrop-color);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px var(--shadow-color);
+            padding: 0.75rem 0;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { font-family: 'Poppins', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--heading-color); }
+        .nav-links { display: flex; align-items: center; gap: 2rem; }
+        .nav-links a { font-weight: 600; color: var(--text-color); position: relative; }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--accent-color);
+            transition: width 0.3s;
+        }
+        .nav-links a:hover::after,
+        .nav-links a.active::after { width: 100%; }
+        .theme-toggle { background: none; border: none; color: var(--text-color); font-size: 1.2rem; cursor: pointer; }
+        .hamburger { display: none; background: none; border: none; color: var(--text-color); font-size: 1.5rem; cursor: pointer; z-index: 1001; }
+
+        /* 5. Hero Section */
+        #home {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 10rem 0 4rem;
+            position: relative;
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('https://placehold.co/1920x1080/020617/e0f2fe?text=Dynamic+Volleyball+Action') no-repeat center center/cover;
+            color: white;
+        }
+        .hero-content { max-width: 800px; }
+        .hero-content h1 { color: white; }
+        .hero-content .subtitle { font-size: 1.2rem; margin: 1.5rem 0 2.5rem; color: var(--muted-text-color); }
+
+        /* Fun Facts & History */
+        .facts-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 4rem; }
+        .fact-card { background-color: rgba(30, 41, 59, 0.5); backdrop-filter: blur(5px); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color); }
+        .fact-card .fact-value { font-size: 2rem; font-weight: 700; color: var(--accent-color); }
+        [data-theme="light"] .fact-card { background-color: rgba(255, 255, 255, 0.7); }
+        
+        .history-section { margin-top: 5rem; text-align: left; max-width: 700px; margin-left: auto; margin-right: auto;}
+        .history-section h3 { text-align: center; }
+        .history-section ul { list-style-type: '🏐'; padding-left: 1.5rem; }
+        .history-section li { padding-left: 0.5rem; margin-bottom: 0.5rem; }
+
+        /* 7. Training Section */
+        #training { background-color: var(--panel-color-light); }
+        .training-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .training-card { background: var(--panel-color); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px var(--shadow-color); border: 1px solid var(--border-color); }
+        .training-card i { font-size: 2.5rem; color: var(--accent-color-2); margin-bottom: 1rem; }
+        .training-card h3 { color: var(--accent-color); }
+        
+        .unconventional-tips { margin-top: 4rem; }
+        .tips-list { columns: 2; column-gap: 2rem; }
+        .tips-list li { margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative; }
+        .tips-list li::before { content: '✨'; position: absolute; left: 0; }
+        
+        .training-image-container { margin-top: 4rem; border-radius: 12px; overflow: hidden; }
+        .training-image-container img { border-radius: 12px; }
+        .training-image-container figcaption { text-align: center; padding-top: 0.5rem; color: var(--muted-text-color); font-style: italic; }
+
+        /* 8. Tournaments Section */
+        .tournaments-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+        .tournament-card { background: var(--panel-color); padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 20px var(--shadow-color); border: 1px solid var(--border-color); display: flex; flex-direction: column; }
+        .tournament-card h3 { margin-bottom: 0.5rem; }
+        .tournament-info { margin-bottom: 1rem; color: var(--muted-text-color); }
+        .tournament-info span { display: block; margin-bottom: 0.25rem; }
+        .tournament-card .card-footer { margin-top: auto; display: flex; gap: 1rem; }
+        .tournament-placeholder-note { text-align: center; margin-top: 3rem; color: var(--muted-text-color); }
+
+        .history-tabs { display: flex; justify-content: center; gap: 1rem; margin: 3rem 0 2rem; }
+        .tab-btn { background: var(--panel-color-light); border: 1px solid var(--border-color); padding: 0.5rem 1rem; border-radius: 8px; cursor: pointer; }
+        .tab-btn.active { background: var(--accent-color); color: white; border-color: var(--accent-color); }
+        
+        .history-content { display: none; }
+        .history-content.active { display: block; overflow-x: auto;}
+        .history-table { width: 100%; border-collapse: collapse; margin-top: 2rem; }
+        .history-table th, .history-table td { padding: 0.8rem 1rem; text-align: left; border-bottom: 1px solid var(--border-color); }
+        .history-table th { background-color: var(--panel-color-light); }
+
+        /* 9. Feedback & Contact Forms */
+        .form-section { background-color: var(--panel-color-light); }
+        .form-container { max-width: 600px; margin: 0 auto; background: var(--panel-color); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 20px var(--shadow-color); }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 0.5rem; }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.3);
+        }
+        textarea { resize: vertical; min-height: 120px; }
+        .rating-stars { display: flex; gap: 0.5rem; font-size: 1.5rem; cursor: pointer; color: var(--muted-text-color); }
+        .rating-stars .star.selected, .rating-stars .star:hover { color: #facc15; }
+        .form-status { margin-top: 1rem; padding: 0.8rem; border-radius: 8px; text-align: center; display: none; }
+        .form-status.success { background-color: var(--success-color); color: white; }
+        .form-status.error { background-color: var(--error-color); color: white; }
+
+        /* 10. About Section */
+        .about-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+        .mission-vision { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+        .value-chip { background: var(--panel-color-light); padding: 0.5rem 1rem; border-radius: 20px; font-weight: 600; }
+        
+        .founder-block { display: flex; gap: 2rem; align-items: center; background: var(--panel-color-light); padding: 2rem; border-radius: 12px; margin-top: 4rem; }
+        .founder-block img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; }
+        
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 4rem 0; }
+        .team-member { text-align: center; }
+        .team-member img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 auto 1rem; }
+        .team-member h4 { margin-bottom: 0.25rem; }
+        .team-member .role { color: var(--accent-color); font-weight: 600; }
+
+        .testimonials { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 4rem 0; }
+        .testimonial-card { background: var(--panel-color); padding: 2rem; border-radius: 12px; position: relative; }
+        .testimonial-card::before { content: '“'; font-size: 5rem; color: var(--accent-color); position: absolute; top: -1rem; left: 1rem; opacity: 0.2; }
+        .testimonial-author { display: flex; align-items: center; gap: 1rem; margin-top: 1.5rem; }
+        .testimonial-author img { width: 50px; height: 50px; border-radius: 50%; }
+        .testimonial-author .author-name { font-weight: 700; }
+        .testimonial-author .author-role { color: var(--muted-text-color); font-size: 0.9rem; }
+
+        .about-cta { text-align: center; margin-top: 4rem; }
+
+        /* Contact Section */
+        #contact { background-color: var(--panel-color-light); }
+        .contact-wrapper { display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: start; }
+        .contact-info-item { display: flex; align-items: start; gap: 1rem; margin-bottom: 1.5rem; }
+        .contact-info-item i { font-size: 1.5rem; color: var(--accent-color); margin-top: 0.25rem; }
+        .social-links { display: flex; gap: 1.5rem; margin-top: 2rem; }
+        .social-links a { font-size: 1.5rem; color: var(--muted-text-color); }
+        .social-links a:hover { color: var(--accent-color); }
+        .map-placeholder { height: 200px; background: var(--panel-color); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--muted-text-color); margin-top: 2rem; }
+
+        /* 11. Footer */
+        .main-footer { background-color: var(--panel-color); padding: 4rem 0 2rem; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 3rem; }
+        .footer-col h4 { color: var(--accent-color); margin-bottom: 1rem; }
+        .footer-col a { display: block; margin-bottom: 0.5rem; color: var(--muted-text-color); }
+        .footer-col a:hover { color: var(--accent-color-hover); }
+        .newsletter-form { display: flex; }
+        .newsletter-form input { flex-grow: 1; border-top-right-radius: 0; border-bottom-right-radius: 0; }
+        .newsletter-form button { border-top-left-radius: 0; border-bottom-left-radius: 0; padding: 0.8rem 1.2rem; }
+        
+        .footer-bottom { border-top: 1px solid var(--border-color); padding-top: 2rem; text-align: center; color: var(--muted-text-color); font-size: 0.9rem; }
+        .footer-bottom .social-links { justify-content: center; margin-bottom: 1rem; }
+
+        /* 12. Back-to-Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+            z-index: 999;
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* 13. Animations & Transitions */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .scroll-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Respect user preference for reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            .scroll-animate { transition: none; }
+        }
+
+        /* 14. Responsive Media Queries */
+        @media (max-width: 1024px) {
+            .about-intro, .contact-wrapper { grid-template-columns: 1fr; }
+            .tips-list { columns: 1; }
+        }
+        
+        @media (max-width: 768px) {
+            body { font-size: 15px; }
+            section { padding: 4rem 0; }
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background-color: var(--panel-color);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2.5rem;
+                transition: right 0.4s ease-in-out;
+            }
+            .nav-links.active { right: 0; }
+            .nav-links a { font-size: 1.2rem; }
+            .hamburger { display: block; }
+            body.nav-open { overflow: hidden; }
+        }
+        
+        @media (max-width: 480px) {
+            .container { width: 95%; }
+            .hero-content .subtitle { font-size: 1rem; }
+            .btn { padding: 0.7rem 1.5rem; }
+            .founder-block { flex-direction: column; text-align: center; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="main-header" id="main-header">
+        <div class="container nav-container">
+            <a href="#home" class="logo">Volleyball Hobby</a>
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#training">Training</a></li>
+                    <li><a href="#tournaments">Tournaments</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li>
+                        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home">
+            <div class="container">
+                <div class="hero-content scroll-animate">
+                    <h1>Elevate Your Game, One Serve at a Time</h1>
+                    <p class="subtitle">The ultimate online hub for amateur and advanced volleyball players. Find training routines, local tournaments, and connect with a passionate community.</p>
+                    <a href="#training" class="btn btn-primary">Start Training</a>
+                    
+                    <div class="facts-container">
+                        <div class="fact-card">
+                            <div class="fact-value">1895</div>
+                            <p>Year Invented</p>
+                        </div>
+                        <div class="fact-card">
+                            <div class="fact-value">900M+</div>
+                            <p>Fans Worldwide</p>
+                        </div>
+                        <div class="fact-card">
+                            <div class="fact-value">68 mph</div>
+                            <p>Fastest Spike</p>
+                        </div>
+                    </div>
+
+                    <div class="history-section">
+                        <h3>A Quick Look at History</h3>
+                        <ul>
+                            <li><strong>1895:</strong> William G. Morgan invents "Mintonette" at a YMCA in Holyoke, MA, as a less strenuous alternative to basketball.</li>
+                            <li><strong>1916:</strong> The "set" and "spike" are introduced in the Philippines, revolutionizing offensive strategy.</li>
+                            <li><strong>1964:</strong> Volleyball makes its debut as an official Olympic sport at the Tokyo Games.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Training Section -->
+        <section id="training">
+            <div class="container">
+                <div class="section-header scroll-animate">
+                    <h2>Master the Fundamentals & Beyond</h2>
+                    <p>Our training programs are designed to build a strong foundation and introduce advanced techniques to help you dominate the court.</p>
+                </div>
+                <div class="training-grid">
+                    <div class="training-card scroll-animate" style="transition-delay: 0.1s;">
+                        <i class="fas fa-dumbbell"></i>
+                        <h3>Strength & Conditioning</h3>
+                        <p>Build explosive power and endurance. Focus on core stability, leg strength for higher jumps, and shoulder health for powerful spikes.</p>
+                    </div>
+                    <div class="training-card scroll-animate" style="transition-delay: 0.2s;">
+                        <i class="fas fa-shoe-prints"></i>
+                        <h3>Agility & Footwork</h3>
+                        <p>Improve your court coverage and reaction time. We cover ladder drills, cone cuts, and defensive shuffling to make you faster and more efficient.</p>
+                    </div>
+                    <div class="training-card scroll-animate" style="transition-delay: 0.3s;">
+                        <i class="fas fa-brain"></i>
+                        <h3>Court IQ & Positioning</h3>
+                        <p>Understand the game on a deeper level. Learn about rotational strategies, defensive positioning, and effective on-court communication.</p>
+                    </div>
+                </div>
+
+                <div class="unconventional-tips scroll-animate" style="transition-delay: 0.4s;">
+                    <h3 style="text-align: center; margin-bottom: 2rem;">Unconventional Tips for a Competitive Edge</h3>
+                    <ul class="tips-list">
+                        <li>Use colored cues for reaction drills to sharpen decision-making.</li>
+                        <li>Practice "mirror" defense drills with music to vary tempo and improve adaptability.</li>
+                        <li>Train on sand to significantly boost balance, stability, and jump height.</li>
+                        <li>Play small-sided 2v2 games to maximize touches and improve ball control.</li>
+                        <li>Incorporate throw-and-call drills to perfect on-court communication under pressure.</li>
+                        <li>Play constraint-based games (e.g., one-touch only) to force quicker thinking.</li>
+                    </ul>
+                </div>
+                
+                <div class="training-image-container scroll-animate">
+                    <figure>
+                        <img src="https://placehold.co/1800x1200/1e293b/94a3b8?text=Intense+Game+Moment" alt="A professional volleyball game in action, showcasing players in mid-air." loading="lazy">
+                        <figcaption>Applying skills in a competitive environment is the ultimate test.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tournaments Section -->
+        <section id="tournaments">
+            <div class="container">
+                <div class="section-header scroll-animate">
+                    <h2>Find Your Next Challenge</h2>
+                    <p>Discover local and regional tournaments for your team. Check out schedules, registration details, and results from past events.</p>
+                </div>
+                <div class="tournaments-grid">
+                    <!-- Sample Tournament Cards -->
+                    <div class="tournament-card scroll-animate" style="transition-delay: 0.1s;">
+                        <h3>Columbus Open 4s</h3>
+                        <div class="tournament-info">
+                            <span><i class="far fa-calendar-alt"></i> Date: Oct 12, 2025</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Location: Dublin Sports Complex</span>
+                        </div>
+                        <p>Annual 4v4 tournament for intermediate and advanced teams. Cash prize for the winning team.</p>
+                        <div class="card-footer">
+                            <a href="https://example.com/tournament-a" class="btn btn-primary" target="_blank">Website</a>
+                            <a href="mailto:tournaments@example.com" class="btn btn-secondary">Contact</a>
+                        </div>
+                    </div>
+                    <div class="tournament-card scroll-animate" style="transition-delay: 0.2s;">
+                        <h3>Great Lakes Indoor Series</h3>
+                        <div class="tournament-info">
+                            <span><i class="far fa-calendar-alt"></i> Date: Nov 8-9, 2025</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Location: Cleveland Convention Center</span>
+                        </div>
+                        <p>A two-day event featuring divisions for all skill levels, from beginner to open.</p>
+                        <div class="card-footer">
+                            <a href="https://example.com/tournament-b" class="btn btn-primary" target="_blank">Website</a>
+                            <a href="mailto:tournaments@example.com" class="btn btn-secondary">Contact</a>
+                        </div>
+                    </div>
+                    <div class="tournament-card scroll-animate" style="transition-delay: 0.3s;">
+                        <h3>Charity Beach Bash 2v2</h3>
+                        <div class="tournament-info">
+                            <span><i class="far fa-calendar-alt"></i> Date: Dec 7, 2025</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Location: Sand Coves, Dayton</span>
+                        </div>
+                        <p>A fun, relaxed beach volleyball tournament with all proceeds going to local charities.</p>
+                        <div class="card-footer">
+                            <a href="https://example.com/tournament-c" class="btn btn-primary" target="_blank">Website</a>
+                            <a href="mailto:tournaments@example.com" class="btn btn-secondary">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <p class="tournament-placeholder-note">Note: Tournament links and details are placeholders. Please check local listings for current events.</p>
+
+                <!-- Recent Tournament History -->
+                <div class="recent-history scroll-animate">
+                    <h3 style="text-align: center; margin-top: 4rem;">Recent Tournament History</h3>
+                    <div class="history-tabs" id="history-tabs">
+                        <button class="tab-btn active" data-year="2025">2025</button>
+                        <button class="tab-btn" data-year="2024">2024</button>
+                        <button class="tab-btn" data-year="2023">2023</button>
+                    </div>
+                    <div id="history-content-2025" class="history-content active">
+                        <table class="history-table">
+                            <thead><tr><th>Event</th><th>Date</th><th>Result/Notes</th><th>Link</th></tr></thead>
+                            <tbody>
+                                <tr><td>Summer Slam</td><td>Aug 15</td><td>1st Place (Open)</td><td><a href="https://example.com">Details</a></td></tr>
+                                <tr><td>King of the Beach</td><td>Jul 20</td><td>Top 8 Finish</td><td><a href="https://example.com">Details</a></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="history-content-2024" class="history-content">
+                        <table class="history-table">
+                            <thead><tr><th>Event</th><th>Date</th><th>Result/Notes</th><th>Link</th></tr></thead>
+                            <tbody>
+                                <tr><td>Winter Classic</td><td>Dec 10</td><td>2nd Place (A-Div)</td><td><a href="https://example.com">Details</a></td></tr>
+                                <tr><td>Autumn Spikefest</td><td>Oct 5</td><td>Quarter-finalist</td><td><a href="https://example.com">Details</a></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="history-content-2023" class="history-content">
+                        <table class="history-table">
+                           <thead><tr><th>Event</th><th>Date</th><th>Result/Notes</th><th>Link</th></tr></thead>
+                            <tbody>
+                                <tr><td>Inaugural Cup</td><td>Sep 1</td><td>Participated</td><td><a href="https://example.com">Details</a></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Feedback Section -->
+        <section id="feedback" class="form-section">
+            <div class="container">
+                <div class="section-header scroll-animate">
+                    <h2>Help Us Improve</h2>
+                    <p>We value your input. Let us know about your experience, what you love, and what we can do better.</p>
+                </div>
+                <div class="form-container scroll-animate">
+                    <form id="feedback-form" novalidate>
+                        <div class="form-group">
+                            <label for="feedback-name">Name</label>
+                            <input type="text" id="feedback-name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="feedback-email">Email</label>
+                            <input type="email" id="feedback-email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="experience-level">Experience Level</label>
+                            <select id="experience-level" name="experience" required>
+                                <option value="">Select your level...</option>
+                                <option value="Beginner">Beginner</option>
+                                <option value="Intermediate">Intermediate</option>
+                                <option value="Advanced">Advanced</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Rating</label>
+                            <div class="rating-stars" id="rating-stars">
+                                <i class="far fa-star star" data-value="1"></i>
+                                <i class="far fa-star star" data-value="2"></i>
+                                <i class="far fa-star star" data-value="3"></i>
+                                <i class="far fa-star star" data-value="4"></i>
+                                <i class="far fa-star star" data-value="5"></i>
+                            </div>
+                            <input type="hidden" id="rating-value" name="rating" value="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="feedback-message">Message / Feedback</label>
+                            <textarea id="feedback-message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Feedback</button>
+                        <div class="form-status" id="feedback-status" role="alert" aria-live="assertive"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <div class="section-header scroll-animate">
+                    <h2>More Than a Game, It's a Community</h2>
+                </div>
+                <div class="about-intro scroll-animate">
+                    <div>
+                        <h3>Our Story</h3>
+                        <p>Volleyball Hobby was born from a simple idea: to create a single place for volleyball lovers to grow their skills and connect with others. We saw a need for a modern, accessible platform that caters to both the weekend warrior and the aspiring pro. Our mission is to fuel your passion for the sport.</p>
+                        <div class="mission-vision">
+                            <span class="value-chip">Mission: Empower players</span>
+                            <span class="value-chip">Vision: Connect communities</span>
+                            <span class="value-chip">Value: Passion & Fun</span>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="https://placehold.co/600x400/1e293b/94a3b8?text=Team+Huddle" alt="A diverse group of volleyball players in a huddle." style="border-radius: 12px;" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="founder-block scroll-animate">
+                    <img src="https://placehold.co/150x150/020617/e0f2fe?text=Founder" alt="Headshot of the founder, Jane Doe." loading="lazy">
+                    <div>
+                        <h4>Jane Doe, Founder</h4>
+                        <p>A former collegiate player and certified coach, Jane founded Volleyball Hobby to share her love for the game and make high-quality training accessible to everyone. She believes in building skills through smart, fun, and engaging methods.</p>
+                    </div>
+                </div>
+
+                <h3 style="text-align: center; margin-top: 4rem;">Our Team</h3>
+                <div class="team-grid scroll-animate">
+                    <div class="team-member">
+                        <img src="https://placehold.co/120x120/020617/e0f2fe?text=P1" alt="Team member headshot." loading="lazy">
+                        <h4>John Smith</h4>
+                        <p class="role">Lead Coach</p>
+                        <p>Specializes in offensive strategies and player development.</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://placehold.co/120x120/020617/e0f2fe?text=P2" alt="Team member headshot." loading="lazy">
+                        <h4>Emily White</h4>
+                        <p class="role">Community Manager</p>
+                        <p>Organizes events and manages our online community platforms.</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://placehold.co/120x120/020617/e0f2fe?text=P3" alt="Team member headshot." loading="lazy">
+                        <h4>Alex Chen</h4>
+                        <p class="role">Content Creator</p>
+                        <p>Creates all the awesome training videos and tutorials you see.</p>
+                    </div>
+                </div>
+
+                <div class="testimonials scroll-animate">
+                    <div class="testimonial-card">
+                        <p>The agility drills on this site completely changed my defensive game. I feel quicker and more confident on the court. Highly recommended!</p>
+                        <div class="testimonial-author">
+                            <img src="https://placehold.co/50x50/020617/e0f2fe?text=A1" alt="Testimonial author avatar." loading="lazy">
+                            <div>
+                                <div class="author-name">Mike R.</div>
+                                <div class="author-role">Intermediate Player</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>As a coach for a youth team, Volleyball Hobby has become my go-to resource for fresh, effective training ideas. The unconventional tips are fantastic.</p>
+                        <div class="testimonial-author">
+                            <img src="https://placehold.co/50x50/020617/e0f2fe?text=A2" alt="Testimonial author avatar." loading="lazy">
+                            <div>
+                                <div class="author-name">Sarah L.</div>
+                                <div class="author-role">Youth Coach</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-cta scroll-animate">
+                    <a href="#contact" class="btn btn-primary">Join Our Community</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <div class="section-header scroll-animate">
+                    <h2>Get In Touch</h2>
+                    <p>Have questions, suggestions, or want to partner with us? We'd love to hear from you.</p>
+                </div>
+                <div class="contact-wrapper">
+                    <div class="contact-info scroll-animate" style="transition-delay: 0.1s;">
+                        <h3>Contact Information</h3>
+                        <div class="contact-info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone</strong><br>
+                                <a href="tel:+15550104321">+1 (555) 010-4321</a>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong><br>
+                                <a href="mailto:hello@volleyballhobby.com">hello@volleyballhobby.com</a>
+                            </div>
+                        </div>
+                         <div class="contact-info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Address</strong><br>
+                                123 Volleyball Ct, Dublin, OH 43016, USA
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="far fa-clock"></i>
+                            <div>
+                                <strong>Business Hours</strong><br>
+                                Monday - Friday: 9:00 AM - 5:00 PM
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                        <div class="map-placeholder">
+                           Map Placeholder
+                        </div>
+                    </div>
+                    <div class="form-container scroll-animate" style="transition-delay: 0.2s;">
+                         <form id="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="contact-name">Name</label>
+                                <input type="text" id="contact-name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email</label>
+                                <input type="email" id="contact-email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-subject">Subject</label>
+                                <input type="text" id="contact-subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-message">Message</label>
+                                <textarea id="contact-message" name="message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                            <div class="form-status" id="contact-status" role="alert" aria-live="assertive"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Volleyball Hobby</h4>
+                    <p>Your passion, our mission. Elevating the game for players everywhere.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#training">Training</a></li>
+                        <li><a href="#tournaments">Tournaments</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                 <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Subscribe</h4>
+                    <p>Get the latest tips and news delivered to your inbox.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email" aria-label="Your Email for newsletter">
+                        <button type="submit" class="btn btn-primary" aria-label="Subscribe to newsletter"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                 <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                 </div>
+                <p>&copy; 2025 Volleyball Hobby. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Scroll back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // --- 1. THEME SWITCHER ---
+        const themeToggle = document.getElementById('theme-toggle');
+        const sunIcon = '<i class="fas fa-sun"></i>';
+        const moonIcon = '<i class="fas fa-moon"></i>';
+        
+        const applyTheme = (theme) => {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            themeToggle.innerHTML = theme === 'dark' ? sunIcon : moonIcon;
+        };
+
+        const getInitialTheme = () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                return savedTheme;
+            }
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            return prefersDark ? 'dark' : 'light';
+        };
+
+        let currentTheme = getInitialTheme();
+        applyTheme(currentTheme);
+
+        themeToggle.addEventListener('click', () => {
+            currentTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            applyTheme(currentTheme);
+        });
+
+        // --- 2. STICKY HEADER ---
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // --- 3. MOBILE NAVIGATION ---
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            document.body.classList.toggle('nav-open');
+            const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+            hamburger.setAttribute('aria-expanded', !isExpanded);
+        });
+        // Close nav when a link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                document.body.classList.remove('nav-open');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // --- 4. SCROLL ANIMATIONS (INTERSECTION OBSERVER) ---
+        const animatedElements = document.querySelectorAll('.scroll-animate');
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (!prefersReducedMotion) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            animatedElements.forEach(el => {
+                observer.observe(el);
+            });
+        } else {
+             animatedElements.forEach(el => {
+                el.classList.add('visible');
+            });
+        }
+
+        // --- 5. SCROLL SPY FOR NAV HIGHLIGHTING ---
+        const sections = document.querySelectorAll('section[id]');
+        const navLinksAnchors = document.querySelectorAll('.nav-links a');
+
+        const activateNavLink = (id) => {
+            navLinksAnchors.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${id}`) {
+                    link.classList.add('active');
+                }
+            });
+        };
+
+        const scrollSpyObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    activateNavLink(entry.target.id);
+                }
+            });
+        }, { rootMargin: '-30% 0px -70% 0px' });
+        
+        sections.forEach(section => {
+            scrollSpyObserver.observe(section);
+        });
+
+
+        // --- 6. BACK-TO-TOP BUTTON ---
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 600) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // --- 7. FORM HANDLING ---
+        const handleFormSubmit = (formId, statusId) => {
+            const form = document.getElementById(formId);
+            const statusEl = document.getElementById(statusId);
+            
+            if(!form) return;
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const formData = new FormData(form);
+                const data = Object.fromEntries(formData.entries());
+                
+                let isValid = true;
+                for(const field of form.querySelectorAll('[required]')) {
+                    if(!field.value.trim()) {
+                        isValid = false;
+                        break;
+                    }
+                }
+                
+                statusEl.style.display = 'block';
+
+                if (isValid) {
+                    console.log(`--- ${formId} Submission ---`);
+                    console.log(JSON.stringify(data, null, 2));
+                    
+                    statusEl.textContent = 'Thank you! Your submission was successful.';
+                    statusEl.className = 'form-status success';
+                    form.reset();
+                    // Reset rating stars if it's the feedback form
+                    if(formId === 'feedback-form') {
+                         document.querySelectorAll('#rating-stars .star').forEach(s => s.classList.remove('selected', 'fas'));
+                    }
+                } else {
+                    statusEl.textContent = 'Please fill out all required fields.';
+                    statusEl.className = 'form-status error';
+                }
+                
+                setTimeout(() => {
+                    statusEl.style.display = 'none';
+                }, 5000);
+            });
+        };
+
+        handleFormSubmit('feedback-form', 'feedback-status');
+        handleFormSubmit('contact-form', 'contact-status');
+
+        // --- 8. RATING STARS FOR FEEDBACK FORM ---
+        const ratingStarsContainer = document.getElementById('rating-stars');
+        if (ratingStarsContainer) {
+            const stars = ratingStarsContainer.querySelectorAll('.star');
+            const ratingValueInput = document.getElementById('rating-value');
+            
+            stars.forEach(star => {
+                star.addEventListener('click', () => {
+                    const value = star.dataset.value;
+                    ratingValueInput.value = value;
+                    stars.forEach(s => {
+                        s.classList.toggle('selected', s.dataset.value <= value);
+                        s.classList.toggle('fas', s.dataset.value <= value);
+                        s.classList.toggle('far', s.dataset.value > value);
+                    });
+                });
+            });
+        }
+        
+        // --- 9. TOURNAMENT HISTORY TABS ---
+        const tabsContainer = document.getElementById('history-tabs');
+        if(tabsContainer) {
+            const tabButtons = tabsContainer.querySelectorAll('.tab-btn');
+            const historyContents = document.querySelectorAll('.history-content');
+            
+            tabsContainer.addEventListener('click', (e) => {
+                if (e.target.classList.contains('tab-btn')) {
+                    const year = e.target.dataset.year;
+                    
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    e.target.classList.add('active');
+                    
+                    historyContents.forEach(content => {
+                        content.classList.remove('active');
+                        if (content.id === `history-content-${year}`) {
+                            content.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }
+    });
+    </script>
+</body>
+</html>
